@@ -1,0 +1,20 @@
+* {
+    text-align: center;
+    align-items: center;
+    background-color: rgb(177, 177, 186);
+}
+
+li {
+    display: inline-block;
+    width: auto;
+    padding: 2%;
+    color: rgb(65, 61, 61);
+    font-weight: bolder;
+    border: rgb(77, 111, 77) solid;
+    background-color: rgb(234, 234, 234);
+    border-radius: 15px;
+}
+
+.week {
+    padding: 4px;
+}
