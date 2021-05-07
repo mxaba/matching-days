@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/match-days.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <title>Matching Days</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+    <script type="text/x-template" class="matching-days-template">
+        {{#each daysoftheweek}}
+            <li>
+                {{day}}
+            </li>
+        {{/each}}
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="week">
+                <ul>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="entered-dates">
+                <div class="first-date">
+                    <label for="firstdate">Fiest Date</label>
+                    <input type="date" name="" id="firstdate">
+                </div>
+            </div>
+        </div>
+
+        <div class="entered-dates">
+            <div class="second-date">
+                <label for="seconddate">Second Date</label>
+                <input type="date" name="" id="seconddate">
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./js/match-days-logic.js"></script>
+    <script src="./js/match-days-template.js"></script>
+</body>
+</html>
