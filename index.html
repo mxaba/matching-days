@@ -10,7 +10,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
     <script type="text/x-template" class="matching-days-template">
         {{#each daysOfTheWeek}}
-            <li class="">
+            <li class="{{color}}">
                 {{dayOfWeek}}
             </li>
         {{/each}}
@@ -18,13 +18,19 @@
 </head>
 <body>
     <div class="container">
+        <div class="row">
+            <h1>Matching Days</h1>
+        </div>
+        <div class="row">
+            <h4 class="message message1 succ"></h4>
+        </div>
         <div class="week">
             <div class="row">
                 <ul>
 
                 </ul>
             </div>
-        </div>
+        </div> <br>
 
         <div class="row">
             <div class="entered-dates">
@@ -37,8 +43,8 @@
 
         <div class="entered-dates">
             <div class="second-date">
-                <label for="seconddate">Second Date</label>
-                <input type="date" name="" id="seconddate" class="seconddate">
+                <label for="secondate">Second Date</label>
+                <input type="date" name="" id="secondate" class="secondate">
             </div>
         </div>
 

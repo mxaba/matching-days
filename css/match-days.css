@@ -18,3 +18,23 @@ li {
 .week {
     padding: 4px;
 }
+
+.message1 {
+    color: red;
+}
+
+.succ {
+    color: green;
+}
+
+.red {
+    background: red;
+}
+
+.blue {
+    background: blue;
+}
+
+.green {
+    background: green;
+}
