@@ -6,10 +6,7 @@ document.addEventListener('DOMContentLoaded', function(){
     var matchingDaysTemplate = document.querySelector('.matching-days-template').innerHTML
     var matchDaysCompiled = Handlebars.compile(matchingDaysTemplate)
 
-    var matchTemplateObjects = [{dayOfWeek : 'Sunday'}, {dayOfWeek : 'Monday'}, {dayOfWeek : 'Tuesday'}, {dayOfWeek : 'Wednesday'}, {dayOfWeek : 'Thursday'}, {dayOfWeek : 'Friday'}, {dayOfWeek : 'Saturday'}]
-
-    weekDays.innerHTML = matchDaysCompiled({daysOfTheWeek : matchTemplateObjects})
-    // console.log(weekDays)
+    weekDays.innerHTML = matchDaysCompiled({daysOfTheWeek : initFunction.getMatchTemplate()})
 
     function emptyHTML(){
         setTimeout(function(){
@@ -45,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function(){
             // setTimeout(function(){
             //     message.innerHTML = ''
             // }, 700)
-            weekDays.innerHTML = matchDaysCompiled({daysOfTheWeek : matchTemplateObjects})
+            weekDays.innerHTML = matchDaysCompiled({daysOfTheWeek : initFunction.getMatchTemplate()})
         }
     }
 
