@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function(){
         var first = document.querySelector('.firstdate').value
         var second = document.querySelector('.secondate').value
         if (first ){
+            console.log(typeof first)
             // emptyHTML()
             var newDate = new Date(first)
             initFunction.setFirstDay(newDate.getDay())
