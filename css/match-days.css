@@ -38,3 +38,7 @@ li {
 .green {
     background: green;
 }
+
+input[type='date']{
+    background: white;
+}
