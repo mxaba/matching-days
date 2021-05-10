@@ -8,12 +8,6 @@ document.addEventListener('DOMContentLoaded', function(){
 
     weekDays.innerHTML = matchDaysCompiled({daysOfTheWeek : initFunction.getMatchTemplate()})
 
-    function emptyHTML(){
-        setTimeout(function(){
-            weekDays.innerHTML = ''
-        }, 100)
-    }
-
     var matchDays = function(){
         var first = document.querySelector('.firstdate').value
         var second = document.querySelector('.secondate').value
