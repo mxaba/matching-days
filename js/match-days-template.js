@@ -17,32 +17,19 @@ document.addEventListener('DOMContentLoaded', function(){
     var matchDays = function(){
         var first = document.querySelector('.firstdate').value
         var second = document.querySelector('.secondate').value
-        if (first && second){
+        if (first ){
             // emptyHTML()
             var newDate = new Date(first)
             initFunction.setFirstDay(newDate.getDay())
             console.log( 'firstdDay: ' + initFunction.getSetDays().firstDay)
-
-            var newDate2 = new Date(second)
-            initFunction.setSecondDay(newDate2.getDay())
-            console.log( 'secondDay: ' + initFunction.getSetDays().secondDay)
-            message.classList.remove('message1')
-            message.classList.add('succ')
             message.innerHTML = initFunction.getMessage()
             console.log('Message: ' + initFunction.getMessage())
             weekDays.innerHTML = matchDaysCompiled({daysOfTheWeek : initFunction.matchingDaysWithColor()})
 
-            document.querySelector('.firstdate').value = ''
-            document.querySelector('.secondate').value = ''
-
-        } else {
-            message.classList.remove("succ")
-            message.classList.add('message1')
-            message.innerHTML = "Please select the other date!"
-            // setTimeout(function(){
-            //     message.innerHTML = ''
-            // }, 700)
-            weekDays.innerHTML = matchDaysCompiled({daysOfTheWeek : initFunction.getMatchTemplate()})
+        } if (second){
+            var newDate2 = new Date(second)
+            initFunction.setSecondDay(newDate2.getDay())
+            weekDays.innerHTML = matchDaysCompiled({daysOfTheWeek : initFunction.matchingDaysWithColor()})
         }
     }
 

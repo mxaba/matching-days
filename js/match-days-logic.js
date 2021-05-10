@@ -23,15 +23,22 @@ function MatchingDaysLogic(){
 
     function matchingDaysWithColor(){
         matchTemplateObjects = [{dayOfWeek : 'Sunday', color: ""}, {color: "", dayOfWeek : 'Monday'}, {color: "", dayOfWeek : 'Tuesday'}, {color: "", dayOfWeek : 'Wednesday'}, {color: "", dayOfWeek : 'Thursday'}, {color: "", dayOfWeek : 'Friday'}, {color: "", dayOfWeek : 'Saturday'}]
-        if (secondDay == firstDay){
+        if (secondDay == firstDay && secondDay !== undefined && firstDay != undefined){
             matchTemplateObjects[secondDay].color = "green"
-            // messageMatch = 'They match and the color will be Green!'
-        } else {
+        return matchTemplateObjects
+        // messageMatch = 'They match and the color will be Green!'
+        } if (secondDay !== undefined && firstDay === undefined ){
+            matchTemplateObjects[secondDay].color = "blue"
+        return matchTemplateObjects
+    } if (secondDay === undefined && firstDay !== undefined ){
+            matchTemplateObjects[firstDay].color = "red"
+        return matchTemplateObjects
+    }
+        else {
             matchTemplateObjects[secondDay].color = "red"
             matchTemplateObjects[firstDay].color = "blue"
-
+            return matchTemplateObjects
         }
-        return matchTemplateObjects
     }
 
     function getMatchTemplate(){
