@@ -23,7 +23,7 @@ function MatchingDaysLogic(){
 
     function matchingDaysWithColor(){
         matchTemplateObjects = [{dayOfWeek : 'Sunday', color: ""}, {color: "", dayOfWeek : 'Monday'}, {color: "", dayOfWeek : 'Tuesday'}, {color: "", dayOfWeek : 'Wednesday'}, {color: "", dayOfWeek : 'Thursday'}, {color: "", dayOfWeek : 'Friday'}, {color: "", dayOfWeek : 'Saturday'}]
-        if (secondDay === firstDay){
+        if (secondDay == firstDay){
             matchTemplateObjects[secondDay].color = "green"
             // messageMatch = 'They match and the color will be Green!'
         } else {
