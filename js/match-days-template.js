@@ -5,8 +5,9 @@ document.addEventListener('DOMContentLoaded', function(){
 
     var matchingDaysTemplate = document.querySelector('.matching-days-template').innerHTML
     var matchDaysCompiled = Handlebars.compile(matchingDaysTemplate)
+    var matchTemplateObjects = [{dayOfWeek : 'Sunday', color: ""}, {color: "", dayOfWeek : 'Monday'}, {color: "", dayOfWeek : 'Tuesday'}, {color: "", dayOfWeek : 'Wednesday'}, {color: "", dayOfWeek : 'Thursday'}, {color: "", dayOfWeek : 'Friday'}, {color: "", dayOfWeek : 'Saturday'}]
 
-    weekDays.innerHTML = matchDaysCompiled({daysOfTheWeek : initFunction.getMatchTemplate()})
+    weekDays.innerHTML = matchDaysCompiled({daysOfTheWeek : matchTemplateObjects})
 
     var matchDays = function(){
         var first = document.querySelector('.firstdate').value

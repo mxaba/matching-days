@@ -1,7 +1,5 @@
 function MatchingDaysLogic(){
-
-    var matchTemplateObjects = [{dayOfWeek : 'Sunday', color: ""}, {color: "", dayOfWeek : 'Monday'}, {color: "", dayOfWeek : 'Tuesday'}, {color: "", dayOfWeek : 'Wednesday'}, {color: "", dayOfWeek : 'Thursday'}, {color: "", dayOfWeek : 'Friday'}, {color: "", dayOfWeek : 'Saturday'}]
-
+    
     var firstDay = undefined
     var secondDay = undefined
     var messageMatch = ""
